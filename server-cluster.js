@@ -21,7 +21,9 @@ if (cluster.isMaster) {
 
   app.get('/', function(req, res) {
     console.log('Request to worker ' + cluster.worker.id); 
-    res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
+    setTimeout(function() {
+      res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
+    }, 1000);
   });
 
   app.listen(port, function() {
