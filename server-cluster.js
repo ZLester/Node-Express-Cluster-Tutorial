@@ -1,4 +1,5 @@
 var cluster = require('cluster');
+var args = process.argv.splice(2);
 
 if (cluster.isMaster) {
   var cpus = require('os').cpus();
@@ -17,13 +18,11 @@ if (cluster.isMaster) {
 } else {
   var express = require('express');
   var app = express();
-  var port = process.env.PORT || 3000;
+  var port = args[0] || 3000;
 
   app.get('/', function(req, res) {
     console.log('Request to worker ' + cluster.worker.id); 
-    setTimeout(function() {
-      res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
-    }, 1000);
+    res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
   });
 
   app.listen(port, function() {
