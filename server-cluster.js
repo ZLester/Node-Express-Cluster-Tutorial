@@ -22,6 +22,9 @@ if (cluster.isMaster) {
 
   app.get('/', function(req, res) {
     console.log('Request to worker ' + cluster.worker.id); 
+    for (var i = 0; i < 10000000; i++) {
+      // do some unneccessary work
+    }
     res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
   });
 

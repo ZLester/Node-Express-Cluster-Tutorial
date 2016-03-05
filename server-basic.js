@@ -5,7 +5,10 @@ var port = args[0] || 3000;
 
 app.get('/', function(req, res) {
   console.log('Request to server');
-    res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
+  for (var i = 0; i < 10000000; i++) {
+    // do some unneccessary work
+  }
+  res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
 });
 
 app.listen(port, function() {
