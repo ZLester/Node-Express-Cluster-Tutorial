@@ -5,7 +5,7 @@ var port = args[0] || 3000;
 
 app.get('/', function(req, res) {
   console.log('Request to server');
-  for (var i = 0; i < 10000000; i++) {
+  for (var i = 0; i < 20000000; i++) {
     // do some unneccessary work
   }
   res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');

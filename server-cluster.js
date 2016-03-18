@@ -6,6 +6,7 @@ if (cluster.isMaster) {
   cpus.forEach(function(cpu) {
     cluster.fork();
   });
+  console.log(cpus);
 
   cluster.on('online', function(worker) {
     console.log('Worker ' + worker.id + ' is here to chew bubblegum and scale node applications.');
@@ -22,7 +23,7 @@ if (cluster.isMaster) {
 
   app.get('/', function(req, res) {
     console.log('Request to worker ' + cluster.worker.id); 
-    for (var i = 0; i < 10000000; i++) {
+    for (var i = 0; i < 20000000; i++) {
       // do some unneccessary work
     }
     res.send('Q: Why are JS devs so bad at therapy? A: They just don\'t Node how to Express themelves.');
