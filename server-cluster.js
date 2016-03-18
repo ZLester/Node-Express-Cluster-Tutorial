@@ -6,7 +6,6 @@ if (cluster.isMaster) {
   cpus.forEach(function(cpu) {
     cluster.fork();
   });
-  console.log(cpus);
 
   cluster.on('online', function(worker) {
     console.log('Worker ' + worker.id + ' is here to chew bubblegum and scale node applications.');
