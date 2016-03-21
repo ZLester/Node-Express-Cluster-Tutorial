@@ -4,7 +4,7 @@ var args = process.argv.splice(2);
 var port = args[0] || 3000;
 
 app.get('/', function(req, res) {
-  console.log('Request to server');
+  console.log('Request to server on ' + port);
   for (var i = 0; i < 20000000; i++) {
     // do some unneccessary work
   }
