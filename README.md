@@ -7,6 +7,15 @@
 
 #### Testing server performance
 * You can compare the performance of each server with [Siege](https://github.com/JoeDog/siege), an awesome HTTP load testing utility.
-* The below comparison was generated using the siege command `siege -b -c 255 -t 15S $serverAddress`
+* The below comparison was generated using the siege command `siege -b -c 255 -t 15S http://localhost:3000`
 
 ![](https://github.com/ZLester/Scaling-Node-Express-Applications/blob/master/serverStats.png?raw=true)
+
+#### Setting up the repository/running performance tests yourself
+* Use `npm install` to grab the required node modules
+* Install siege globally via `npm install -g siege`
+* Run the basic server via `npm run basic`
+* In another terminal window, test the server's performance via `npm run siege` or create a custom siege test of your choosing
+* Once the test is complete, shut down the basic server and run the cluster server via `npm run cluster`
+* Test the cluster server with the same test you ran on the basic server
+* Once the second test is complete, you can compare each servers' performance via the terminal log or view more detailed log results from Siege in `/usr/local/var/siege.log`

@@ -9,7 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "basic": "node server-basic.js",
+    "cluster": "node server-basic.js",
+    "siege": "siege -b -c 255 -t 15S http://localhost:3000"
   },
   "repository": {
     "type": "git",
