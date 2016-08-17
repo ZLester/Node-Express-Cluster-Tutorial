@@ -19,3 +19,8 @@
 * Once the test is complete, shut down the basic server and run the cluster server via `npm run cluster`
 * Test the cluster server with the same test you ran on the basic server
 * Once the second test is complete, you can compare each servers' performance via the terminal log or view more detailed log results from Siege in `/usr/local/var/siege.log`
+
+#### Further Reading
+* [Node Cluster Module Docs](https://nodejs.org/api/cluster.html)
+* [Sitepoint Tutorial](https://www.sitepoint.com/how-to-create-a-node-js-cluster-for-speeding-up-your-apps/)
+* [Throng](https://github.com/hunterloftis/throng), an awesome library to assist in managing clustered Node apps in production
