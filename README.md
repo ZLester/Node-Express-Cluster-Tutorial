@@ -13,7 +13,8 @@
 
 #### Setting up the repository/running performance tests yourself
 * Use `npm install` to grab the required node modules
-* Install siege globally via `npm install -g siege`
+* ~~Install siege globally via `npm install -g siege`~~
+* Install the siege command line tool by the following the steps outlined in this blog post [Load Testing your Site with Siege](https://drupalize.me/blog/201507/load-testing-your-site-siege)
 * Run the basic server via `npm run basic`
 * In another terminal window, test the server's performance via `npm run siege` or create a custom siege test of your choosing
 * Once the test is complete, shut down the basic server and run the cluster server via `npm run cluster`
