@@ -13,8 +13,7 @@
 
 #### Setting up the repository/running performance tests yourself
 * Use `npm install` to grab the required node modules
-* ~~Install siege globally via `npm install -g siege`~~
-* Install the siege command line tool by the following the steps outlined in this blog post [Load Testing your Site with Siege](https://drupalize.me/blog/201507/load-testing-your-site-siege)
+* Install the Siege command line tool by following the steps outlined in [this blog post](https://drupalize.me/blog/201507/load-testing-your-site-siege)
 * Run the basic server via `npm run basic`
 * In another terminal window, test the server's performance via `npm run siege` or create a custom siege test of your choosing
 * Once the test is complete, shut down the basic server and run the cluster server via `npm run cluster`
@@ -22,6 +21,7 @@
 * Once the second test is complete, you can compare each servers' performance via the terminal log or view more detailed log results from Siege in `/usr/local/var/siege.log`
 
 #### Further Reading
+* [Load Testing your Site with Siege](https://drupalize.me/blog/201507/load-testing-your-site-siege)
 * [Node Cluster Module Docs](https://nodejs.org/api/cluster.html)
 * [Sitepoint Tutorial](https://www.sitepoint.com/how-to-create-a-node-js-cluster-for-speeding-up-your-apps/)
 * [Throng](https://github.com/hunterloftis/throng), an awesome library to assist in managing clustered Node apps in production
