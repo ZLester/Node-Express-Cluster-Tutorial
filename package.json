@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "basic": "node server-basic.js",
-    "cluster": "node server-basic.js",
+    "cluster": "node server-cluster.js",
     "siege": "siege -b -c 255 -t 15S http://localhost:3000"
   },
   "repository": {
